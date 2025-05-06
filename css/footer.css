@@ -1,0 +1,160 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== Footer Base ==== */
+#site-footer {
+  box-sizing: border-box;
+  background-color: var(--color-bg-muted);
+  border-top: 1px solid var(--color-bg-muted);
+  color: var(--color-text-dark);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-sm);
+}
+
+/* ==== Shared Section Layout ==== */
+.footer-region,
+.footer-nav,
+.footer-utilities,
+.footer-info {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.footer-nav,
+.footer-utilities,
+.footer-info {
+  border-top: 1px solid var(--color-bg-muted);
+}
+
+/* ==== Stay Connected Groups ==== */
+.footer-groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-groups section {
+  flex: 1 1 200px;
+  min-width: 160px;
+}
+
+.footer-groups h3 {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.footer-groups ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-groups li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-groups a {
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
+
+/* ==== Main Site Navigation ==== */
+.nav-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 0;
+}
+
+.nav-columns ul {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+  flex: 1 1 200px;
+  min-width: 160px;
+}
+
+.nav-columns li:first-child a {
+  margin-top: 32px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.nav-columns li + li {
+  margin-top: 4px;
+}
+
+.nav-columns a {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
+
+/* ==== Footer Utilities ==== */
+.footer-utilities ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-utilities a {
+  font-weight: 700;
+  padding: 0 8px;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-right: 1px solid var(--color-bg-muted);
+}
+
+.footer-utilities li:last-child a {
+  border-right: none;
+}
+
+/* ==== Organization Info / Colophon ==== */
+.footer-info {
+  padding-top: 16px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.footer-info .separator {
+  margin: 0 5px;
+}
+
+.footer-info a.tel,
+.footer-info time {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ==== Responsive Styles ==== */
+@media (max-width: 800px) {
+  /* Hide the site navigation on smaller screens */
+  .nav-columns {
+    display: none;
+  }
+}

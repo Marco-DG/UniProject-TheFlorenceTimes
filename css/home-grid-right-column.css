@@ -1,0 +1,170 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* sidebar container */
+.homecolumns.rightcolumn {
+  background-color: var(--color-bg);
+  padding: var(--spacing-md);
+  box-sizing: border-box;
+}
+
+/* social bar */
+.socialbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin: var(--spacing-lg) 0;
+  font: 700 18px/1.43 var(--font-serif);
+  color: var(--color-text);
+}
+
+.socialbar .title {
+  margin-right: auto;
+}
+
+.socialbar ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.socialbar li {
+  margin: 0;
+}
+
+.socialbar .socialicon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+.socialbar .socialicon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.socialbar .bg-fill {
+  fill: var(--color-bg-muted);
+  transition: opacity 0.3s ease;
+}
+
+.socialbar .bg-fill-hover {
+  opacity: 0;
+}
+
+.socialbar .socialicon:hover .bg-fill {
+  opacity: 0;
+}
+
+.socialbar .socialicon:hover .bg-fill-hover {
+  opacity: 1;
+}
+
+/* video block */
+.video-block {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container .video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-link,
+figcaption.video-link {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.video-link a,
+figcaption.video-link a {
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
+
+.video-link a:hover,
+figcaption.video-link a:hover {
+  text-decoration: underline;
+}
+
+/* block content and stories */
+.block-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block-content > li {
+  padding-bottom: 16px;
+}
+
+.story-item {
+  display: flex;
+  gap: 16px;
+}
+
+.story-item.sm-thumb {
+  flex-direction: row;
+}
+
+.story-item.is-portrait .main-photo img {
+  width: 85px;
+  height: auto;
+}
+
+.article-headline a,
+.story-item p a {
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+}
+
+.article-headline a:hover,
+.story-item p a:hover {
+  color: var(--color-accent);
+}
+
+.story-item p a {
+  font-weight: 700;
+}
+
+/* premium tag and read more */
+.premium-tag {
+  font-size: 12px;
+  font-weight: bold;
+  color: #b00021;
+  background-color: #f4e5e5;
+  padding: 2px 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #b00021;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}

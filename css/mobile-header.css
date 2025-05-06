@@ -1,0 +1,93 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== global ==== */
+.mobile-header,
+.mobile-nav-left,
+.mobile-nav-right {
+  display: none;
+}
+
+/* ==== mobile layout (<800px) ==== */
+@media (max-width: 799px) {
+  .navbar,
+  .secondary-navbar,
+  .search-desktop {
+    display: none !important;
+  }
+
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    padding: 0 var(--spacing-sm);
+    background-color: var(--color-accent);
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .mobile-header .hamburger {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .mobile-header .mobile-logo img {
+    max-height: 40px;
+    filter: brightness(0) invert(1);
+  }
+
+  .mobile-nav-left,
+  .mobile-nav-right {
+    display: none;
+  }
+
+  .mobile-nav-left.is-open,
+  .mobile-nav-right.is-open {
+    display: block;
+  }
+}
+
+/* ==== desktop layout (≥800px) ==== */
+@media (min-width: 800px) {
+  .mobile-header,
+  .mobile-nav-left,
+  .mobile-nav-right {
+    display: none !important;
+  }
+
+  .search-desktop {
+    display: block !important;
+  }
+
+  .mobile-header .user-dropdown-button .user-icon {
+    color: #ced3d9;
+  }
+}
+
+/* ==== user icon button ==== */
+.mobile-header .user-dropdown-button {
+  font-size: 0;
+  padding: 0.5rem;
+}
+
+.mobile-header .user-dropdown-button .user-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.user-dropdown-button[aria-expanded="true"] .user-icon {
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+}

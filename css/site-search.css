@@ -1,0 +1,72 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* Base Styles */
+.search {
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  max-width: 300px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Input Field */
+.search-input {
+  flex: 1;
+  height: 2.25rem;
+  padding: 0.25rem 2.5rem 0.25rem 1rem;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+  font-size: 1rem;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+/* Submit Button */
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  color: var(--color-accent);
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* 4. Responsive Visibility */
+/* Hide desktop search on mobile */
+@media (max-width: 799px) {
+  .search-desktop {
+    display: none;
+  }
+}
+
+/* Hide mobile search on desktop */
+@media (min-width: 800px) {
+  .mobile-search {
+    display: none;
+  }
+}

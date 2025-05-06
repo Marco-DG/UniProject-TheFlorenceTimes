@@ -1,0 +1,69 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== info bar ==== */
+.info-bar {
+  width: 100%;
+  background-color: var(--color-info-bg);
+  padding: 5px 0;
+}
+
+/* ==== news alert container ==== */
+.news-alert {
+  margin: 0 auto;
+  display: table;
+  width: 100%;
+}
+
+/* ==== row styling ==== */
+.news-alert-bar {
+  display: table-row;
+}
+
+/* ==== column styling ==== */
+.news-alert-column {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 30px;
+  color: var(--color-text-light);
+}
+
+/* ==== title column ==== */
+.news-column-title {
+  width: 21%;
+  padding: 0 20px 0 0;
+  border-right: 1px solid var(--color-divider);
+  vertical-align: middle;
+}
+
+.news-column-title h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+}
+
+/* ==== headline styling ==== */
+.news-alert-column h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  line-height: 1.4;
+}
+
+.news-alert-column h2 a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.news-alert-column h2 a:hover {
+  text-decoration: underline;
+}

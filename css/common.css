@@ -1,0 +1,71 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,700&display=swap");
+
+/* ==== Variable Definitions ==== */
+:root {
+  /* Layout */
+  --container-width: 1225px;
+
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-bg-muted: #e8eaed;
+  --color-text: #111827;
+  --color-accent: #a9091f;
+
+  /* Typography */
+  --font-serif: 'Literata', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* Shadow */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== CSS Reset ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== Global Typography ========== */
+body {
+  font-family: var(--font-serif), serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== Accessibility: Hidden text ==== */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

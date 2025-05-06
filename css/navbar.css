@@ -1,0 +1,121 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== Desktop Navbar (≥800px) ==== */
+@media (min-width: 800px) {
+
+  /* Hide navbar by default on small screens */
+  .navbar {
+    display: none;
+  }
+
+  /* Navbar Container */
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background: var(--color-bg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    height: 107px;
+  }
+
+  /* Navbar Sections */
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-left {
+    justify-content: flex-start;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-right {
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+  }
+
+  /* Logo */
+  .logo-img {
+    width: 420px;
+    height: auto;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-text);
+  }
+
+  /* Navbar Button */
+  .navbar-button {
+    height: 20px;
+    padding: 0 var(--spacing-sm);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text);
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .navbar-button:hover {
+    color: var(--color-accent);
+  }
+
+  /* Subscribe Button */
+  .navbar-button.subscribe {
+    height: 28.84px;
+    width: 94.48px;
+    padding: 3px 10px;
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-bg);
+    background: var(--color-text);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  .navbar-button.subscribe:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* Icon Button */
+  .icon-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    color: var(--color-text);
+  }
+
+  /* Badge */
+  .badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ffdf55;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 999px;
+  }
+}

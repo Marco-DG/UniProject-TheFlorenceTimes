@@ -1,0 +1,71 @@
+<header class="mobile-header">
+  <button class="hamburger hamburger-left" aria-label="Open main menu" aria-controls="mobile-nav-left"
+    aria-expanded="false">
+    ☰
+  </button>
+
+  <a href="#" class="mobile-logo">
+    <img src="rsc/The-Florence-Times.svg" alt="The Florence Times Home Logo">
+  </a>
+
+  <button class="hamburger hamburger-right user-dropdown-button" aria-label="Open user menu"
+    aria-controls="mobile-nav-right" aria-expanded="false">
+    <!-- Custom Icon - by ChatGPT -->
+    <svg title="user profile" class="user-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="user-mask">
+          <rect width="24" height="24" fill="white" />
+          <circle cx="12" cy="8" r="4" fill="black" />
+          <path d="M6 20
+             c0-4 4-6 6-6
+             s6 2 6 6
+             Z" fill="black" />
+        </mask>
+      </defs>
+      <circle cx="12" cy="12" r="12" fill="currentColor" mask="url(#user-mask)" />
+    </svg>
+  </button>
+</header>
+
+
+<nav id="mobile-nav-left" class="mobile-nav-left" aria-hidden="true">
+  <!-- Close button -->
+  <button class="close-button" aria-label="Close menu">
+    <svg viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
+      <line x1="2.5" y1="30.5" x2="30.5" y2="2.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+      <line x1="2.5" y1="2.5" x2="30.5" y2="30.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <!-- Search slot for mobile -->
+  <!-- Injected in the DOM via JS -->
+  <div class="mobile-search">
+    <div id="search-slot-mobile"></div>
+  </div>
+  <!-- Secondary navbar for mobile -->
+  <!-- Injected in the DOM via JS -->
+  <div id="mobile-secondary-navbar-slot"></div>
+
+</nav>
+
+
+<nav id="mobile-nav-right" class="mobile-nav-right" aria-hidden="true">
+  <button class="close-button" aria-label="Close">
+    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
+      <line x1="2.5" y1="30.5" x2="30.5" y2="2.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+      <line x1="2.5" y1="2.5" x2="30.5" y2="30.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <div class="dropdown-button-wrap">
+    <a class="dropdown-button" href="#">Sign in</a>
+    <a class="dropdown-button" href="#">Subscribe</a>
+  </div>
+
+  <ul class="dropdown-link-list">
+    <li><a href="#">Newsletter signup</a></li>
+    <li><a href="#">Gift subscriptions</a></li>
+    <li><a href="#">Customer service</a></li>
+  </ul>
+</nav>

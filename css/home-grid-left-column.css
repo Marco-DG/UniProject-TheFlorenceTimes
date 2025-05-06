@@ -1,0 +1,164 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== Left Column ==== */
+.left-column {
+  width: 324px;
+  padding: 0 1rem 0 0.5rem;
+  font: 14px/20px 'Literata', serif;
+  color: #111827;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.left-column a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Literata', serif;
+}
+.left-column a:hover {
+  color: #a9091f;
+}
+
+/* ==== Breaking News ==== */
+.breaking-news .stories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breaking-news .story-item {
+  padding: 1rem 0;
+}
+.breaking-news .story-item:last-child {
+  padding-bottom: 1rem;
+}
+
+.breaking-news .story-item > a {
+  display: flex;
+  align-items: flex-start;
+}
+
+.breaking-news figure {
+  flex: 0 0 85px;
+  margin-right: 1rem;
+}
+
+.breaking-news img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  display: block;
+}
+
+.breaking-news .headline {
+  flex: 1;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.breaking-news .story-item > a:hover .headline {
+  color: #a9091f;
+}
+
+/* ==== Sponsored Section ==== */
+.sponsored {
+  margin-bottom: 2rem;
+}
+
+.sponsored h2 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  color: #a9091f;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+.sponsored article > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #e8eaed;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.sponsored figure {
+  flex: 0 0 85px;
+  flex-shrink: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sponsored img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  display: block;
+}
+
+.sponsored .headline {
+  flex: 1;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.sponsored article > a:hover .headline {
+  text-decoration: underline;
+}
+
+/* ==== Most Popular ==== */
+.most-popular h2 {
+  background: linear-gradient(90deg, #9ea7b3 30%, #ffffff);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  padding: 4px 12px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.popular-list {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.popular-list li {
+  margin-bottom: 0.5rem;
+}
+
+.popular-list .headline {
+  display: block;
+  font-family: 'Literata', serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  margin: 0;
+  width: 300px;
+}
+.popular-list .headline:hover {
+  color: #b00021;
+  text-decoration: underline;
+}
+
+/* ==== Mobile ==== */
+@media (max-width: 799px) {
+  .left-column {
+    display: none;
+  }
+  .home-grid {
+    display: block;
+  }
+}

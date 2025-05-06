@@ -1,0 +1,109 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ==== Mobile Navigation Right Panel (<800px) ==== */
+@media (max-width: 799px) {
+
+  /* Base panel styles */
+  .mobile-nav-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    padding: 60px var(--spacing-md) var(--spacing-md);
+    background: var(--color-accent);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    z-index: 1200;
+    display: none;
+  }
+
+  /* Slide-in animation */
+  .mobile-nav-right.is-open {
+    display: block;
+    animation: slideFromRight 0.3s forwards;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+  }
+
+  @keyframes slideFromRight {
+    from { right: -240px; }
+    to   { right: 0; }
+  }
+
+  /* Close button (X icon) */
+  .mobile-nav-right .close-button {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1201;
+  }
+
+  .mobile-nav-right .close-button svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--color-text-light, #fff);
+    stroke-width: 5;
+    stroke-linecap: round;
+  }
+
+  /* Primary dropdown buttons */
+  .mobile-nav-right .dropdown-button-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .mobile-nav-right .dropdown-button {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 0.5px solid hsla(0, 0%, 100%, 0.6);
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .mobile-nav-right .dropdown-button:hover {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  /* Secondary links */
+  .mobile-nav-right .dropdown-link-list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+  }
+
+  .mobile-nav-right .dropdown-link-list a {
+    display: block;
+    padding: 0.5rem var(--spacing-md);
+    font-size: 0.875rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0.5px solid hsla(0, 0%, 100%, 0.6);
+  }
+
+  .mobile-nav-right .dropdown-link-list a:hover {
+    border-color: #fff;
+    color: #fff;
+  }
+}

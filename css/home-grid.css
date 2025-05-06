@@ -1,0 +1,73 @@
+/*──────────────────────────────────────────────────────────────────╗
+│ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+| License, see https://mit-license.org for details.                 │
+╚──────────────────────────────────────────────────────────────────*/
+
+/* ========== Container ========== */
+.homecontainer {
+  max-width: 1225px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  box-sizing: border-box;
+}
+
+/* ========== Mobile Default (Base) ========== */
+.home-grid {
+  display: block;
+}
+
+/* ========== Tablet Layout (≥800px) ========== */
+@media (min-width: 800px) {
+  .home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 332px;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+      "content leftside"
+      "rightside rightside";
+    gap: 1px;
+    background-color: #e8eaed;
+  }
+
+  .home-grid .leftcolumn {
+    grid-area: leftside;
+  }
+
+  .home-grid .centercolumn {
+    grid-area: content;
+  }
+
+  .home-grid .rightcolumn {
+    grid-area: rightside;
+  }
+}
+
+/* ========== Desktop Layout (≥1024px) ========== */
+@media (min-width: 1024px) {
+  .home-grid {
+    grid-template-columns: 324px minmax(0, 1fr) 324px;
+    grid-template-areas: "leftside content rightside";
+  }
+}
+
+/* ==== Common Components: Block Title ==== */
+.block-title {
+  background-image: linear-gradient(90deg, #9ea7b3 30%, #ffffff);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  width: 300px;
+  padding: 4px 12px;
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+
+@media (min-width: 800px) {
+  .block-title {
+    width: 100%;
+  }
+}

@@ -1,0 +1,1045 @@
+<!--
+  /*──────────────────────────────────────────────────────────────────╗
+  │ Copyright © 2025 Marco De Groskovskaja, licensed under the MIT    |
+  | License, see https://mit-license.org for details.                 │
+  ╚──────────────────────────────────────────────────────────────────*/
+-->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Florence Times</title>
+
+  <!-- ==== lib/css ==== -->
+  <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ==== common css ==== -->
+  <link href="css/common.css" rel="stylesheet">
+
+  <!-- ==== components css ==== -->
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/podcast-banner.css" rel="stylesheet">
+  <link href="css/topics.css" rel="stylesheet">
+  <link href="css/home-grid.css" rel="stylesheet">
+  <link href="css/home-grid-left-column.css" rel="stylesheet">
+  <link href="css/home-grid-center-column.css" rel="stylesheet">
+  <link href="css/home-grid-right-column.css" rel="stylesheet">
+  <link href="css/info-bar.css" rel="stylesheet">
+  <link href="css/pre-footer.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+
+  <!-- ==== js injected components css ==== -->
+  <link href="css/secondary-navbar.css" rel="stylesheet">
+  <link href="css/site-search.css" rel="stylesheet">
+
+  <!-- ==== mobile css ==== -->
+  <link href="css/mobile-header.css" rel="stylesheet">
+  <link href="css/mobile-nav-left.css" rel="stylesheet">
+  <link href="css/mobile-nav-right.css" rel="stylesheet">
+</head>
+<body>
+<header class="mobile-header">
+  <button class="hamburger hamburger-left" aria-label="Open main menu" aria-controls="mobile-nav-left"
+    aria-expanded="false">
+    ☰
+  </button>
+
+  <a href="#" class="mobile-logo">
+    <img src="rsc/The-Florence-Times.svg" alt="The Florence Times Home Logo">
+  </a>
+
+  <button class="hamburger hamburger-right user-dropdown-button" aria-label="Open user menu"
+    aria-controls="mobile-nav-right" aria-expanded="false">
+    <!-- Custom Icon - by ChatGPT -->
+    <svg title="user profile" class="user-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="user-mask">
+          <rect width="24" height="24" fill="white" />
+          <circle cx="12" cy="8" r="4" fill="black" />
+          <path d="M6 20
+             c0-4 4-6 6-6
+             s6 2 6 6
+             Z" fill="black" />
+        </mask>
+      </defs>
+      <circle cx="12" cy="12" r="12" fill="currentColor" mask="url(#user-mask)" />
+    </svg>
+  </button>
+</header>
+
+
+<nav id="mobile-nav-left" class="mobile-nav-left" aria-hidden="true">
+  <!-- Close button -->
+  <button class="close-button" aria-label="Close menu">
+    <svg viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
+      <line x1="2.5" y1="30.5" x2="30.5" y2="2.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+      <line x1="2.5" y1="2.5" x2="30.5" y2="30.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <!-- Search slot for mobile -->
+  <!-- Injected in the DOM via JS -->
+  <div class="mobile-search">
+    <div id="search-slot-mobile"></div>
+  </div>
+  <!-- Secondary navbar for mobile -->
+  <!-- Injected in the DOM via JS -->
+  <div id="mobile-secondary-navbar-slot"></div>
+
+</nav>
+
+
+<nav id="mobile-nav-right" class="mobile-nav-right" aria-hidden="true">
+  <button class="close-button" aria-label="Close">
+    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
+      <line x1="2.5" y1="30.5" x2="30.5" y2="2.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+      <line x1="2.5" y1="2.5" x2="30.5" y2="30.5" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <div class="dropdown-button-wrap">
+    <a class="dropdown-button" href="#">Sign in</a>
+    <a class="dropdown-button" href="#">Subscribe</a>
+  </div>
+
+  <ul class="dropdown-link-list">
+    <li><a href="#">Newsletter signup</a></li>
+    <li><a href="#">Gift subscriptions</a></li>
+    <li><a href="#">Customer service</a></li>
+  </ul>
+</nav>
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-left"></div>
+
+  <div class="navbar-center">
+    <h1 class="heading-reset">
+      <a href="#" class="logo-link">
+        <img src="rsc/The-Florence-Times.svg" alt="The Florence Times Home Logo" class="logo-img">
+      </a>
+    </h1>
+    <em class="subtitle">Florence's Newspaper</em>
+  </div>
+
+  <div class="navbar-right">
+    <a href="#" title="Subscribe to our newsletter" class="icon-button" aria-label="Newsletter">
+      <!-- Custom Icon - by ChatGPT -->
+      <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#ccc"
+          d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V22.59Z" />
+        <path fill="#ccc"
+          d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z" />
+      </svg>
+      <span class="badge" aria-hidden="true">1</span>
+      <span class="sr-only">You have 1 new newsletter</span>
+
+    </a>
+    <a href="#" class="navbar-button subscribe">Subscribe</a>
+    <a href="#" class="navbar-button">Sign in</a>
+  </div>
+</nav>
+<!-- Injection point -->
+<div id="secondary-navbar-slot"></div>
+<section class="podcast-banner">
+  <div class="items">
+    <article class="item">
+      <a href="#" class="thumb">
+        <img src="rsc/placeholder.webp" alt="Civic Pulse Podcast">
+      </a>
+      <div class="content">
+        <h2>
+          <a href="#">
+            WATCH: Neighborhood hero or hidden outlaw?
+          </a>
+        </h2>
+        <span class="podcasthed">
+          With Mason Trigg and Carla Devine
+        </span>
+      </div>
+    </article>
+
+    <article class="item">
+      <a href="#" class="thumb">
+        <img src="rsc/placeholder.webp" alt="Vanguard Brief Podcast">
+      </a>
+      <div class="content">
+        <h2>
+          <a href="#">
+            Sky Shield: Will the new tech hold the line?
+          </a>
+        </h2>
+        <span class="podcasthed">
+          Eliza Rae hosts Vanguard Brief
+        </span>
+      </div>
+    </article>
+
+    <article class="item">
+      <a href="#" class="thumb">
+        <img src="rsc/placeholder.webp" alt="Judicial Wire with Maren Holt">
+      </a>
+      <div class="content">
+        <h2>
+          <a href="#">
+            WATCH: The two judges shaping 2025
+          </a>
+        </h2>
+        <span class="podcasthed">
+          Judicial Wire with Maren Holt
+        </span>
+      </div>
+    </article>
+  </div>
+</section>
+<div class="topics">
+  <strong>Trending:</strong>
+  <a href="#">Austin</a>
+  <a href="#">Quantum Computing</a>
+  <a href="#">Lena Shaw</a>
+  <a href="#">Seoul</a>
+  <a href="#">Nanotech</a>
+  <a href="#">Raj Patel</a>
+  <a href="#">Oslo</a>
+  <a href="#">AI Ethics</a>
+  <a href="#">Zara Kim</a>
+</div>
+
+<div class="homecontainer">
+  <div class="home-grid">
+    <main id="center-column" class="homecolumns centercolumn">
+  <section class="top-news" aria-labelledby="top-news-heading">
+    <h2 id="top-news-heading" class="sr-only">Top News</h2>
+
+    <!-- Lead Story -->
+    <article class="lead-story overlay-on-mobile is-full-width" aria-labelledby="lead-headline-1">
+      <h2 id="lead-headline-1" class="article-headline">
+        <a href="#">
+          Businesses now face over $2 trillion annually in regulatory expenses, analysis finds
+        </a>
+      </h2>
+
+      <figure class="main-photo">
+        <a href="#" class="home_features position1">
+          <img src="rsc/placeholder-1150-670.webp" width="1150" height="670"
+            alt="Electric vehicle charging at public station">
+        </a>
+      </figure>
+
+      <div class="article-text">
+        <div class="meta" role="note">
+          <span class="byline">
+            By <a href="#">Mallory W.</a>
+          </span>
+          <span class="source">– The Florence Times</span>
+        </div>
+        <p class="summary">
+          A recent study estimates that compliance with federal regulations is now costing U.S. companies upwards of $2
+          trillion each year—an amount nearing the total collected in income taxes annually.
+        </p>
+      </div>
+    </article>
+
+    <!-- Story Item #1 -->
+    <article class="story-item sm-thumb" aria-labelledby="story-headline-1">
+      <figure class="main-photo">
+        <a href="#" class="home_features position1">
+          <img src="rsc/placeholder.webp" width="85" height="85" alt="Containers lined up at a major shipping port">
+        </a>
+      </figure>
+      <div class="story-details">
+        <h2 id="story-headline-1" class="article-headline">
+          <a href="#">China: Trade discussions with U.S. remain on hold</a>
+        </h2>
+        <div class="meta" role="note">
+          <span class="byline">
+            By <a href="#">Tom H. Jr.</a>
+          </span>
+          <span class="source">– The Florence Times</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Story Item #2 -->
+    <article class="story-item sm-thumb" aria-labelledby="story-headline-2">
+      <figure class="main-photo">
+        <a href="#" class="position2">
+          <img src="rsc/placeholder.webp" width="85" height="85" alt="Charging cable plugged into an EV">
+        </a>
+      </figure>
+      <div class="story-details">
+        <h2 id="story-headline-2" class="article-headline">
+          <a href="#">Annual cost of federal oversight surpasses $2 trillion, experts say</a>
+        </h2>
+        <div class="meta" role="note">
+          <span class="byline">
+            By <a href="#">Mallory W.</a>
+          </span>
+          <span class="source">– The Florence Times</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Story Item #3 -->
+    <article class="story-item sm-thumb" aria-labelledby="story-headline-3">
+      <figure class="main-photo">
+        <a href="#" class="position4">
+          <img src="rsc/placeholder.webp" width="85" height="85" alt="Loan assistance application paperwork">
+        </a>
+      </figure>
+      <div class="story-details">
+        <h2 id="story-headline-3" class="article-headline">
+          <a href="#">Oversight gaps left pandemic aid vulnerable to fraud</a>
+        </h2>
+        <div class="meta" role="note">
+          <span class="byline">
+            By <a href="#">Stephen D.</a>
+          </span>
+          <span class="source">– The Florence Times</span>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+    <aside class="left-column" aria-labelledby="sidebar-title">
+  <h2 id="sidebar-title" class="sr-only">Site sidebar</h2>
+
+  <section class="block breaking-news" aria-labelledby="breaking-news-title">
+    <h2 id="breaking-news-title" class="sr-only">
+      Breaking News
+    </h2>
+    <ul class="stories">
+      <li>
+        <article class="story-item">
+          <a href="#">
+            <figure>
+              <img src="rsc/placeholder.webp" alt="Stacks of reclaimed wood in a lumberyard">
+              <figcaption class="sr-only">
+                Going green: Greenfield urges return to domestic forestry
+              </figcaption>
+            </figure>
+            <p class="headline">Going green: Greenfield urges return to domestic forestry</p>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="story-item">
+          <a href="#">
+            <figure>
+              <img src="rsc/placeholder.webp" alt="Digital schematic with neural network overlay">
+              <figcaption class="sr-only">
+                Experts warn of cyber infiltration aimed at AI research labs
+              </figcaption>
+            </figure>
+            <p class="headline">
+              Experts warn of cyber infiltration aimed at AI research labs
+            </p>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="story-item">
+          <a href="#">
+            <figure>
+              <img src="rsc/placeholder.webp" alt="Children gathered for a story time event">
+              <figcaption class="sr-only">
+                Court questions local policy on family consent for school events
+              </figcaption>
+            </figure>
+            <p class="headline">
+              Court questions local policy on family consent for school events
+            </p>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block sponsored" aria-labelledby="sponsored-title">
+    <h2 id="sponsored-title">Sponsored Content</h2>
+    <article>
+      <a href="#">
+        <figure>
+          <img src="rsc/placeholder.webp" alt="Futuristic defense system schematic">
+          <figcaption class="sr-only">
+            Next-Gen Defense: Reinventing resilience with adaptive tech
+          </figcaption>
+        </figure>
+        <p class="headline">
+          Next-Gen Defense: Reinventing resilience with adaptive tech
+        </p>
+      </a>
+    </article>
+  </section>
+
+  <section class="block" aria-labelledby="most-popular-title">
+    <h2 id="most-popular-title"  class="block-title">Most Popular</h2>
+    <ul class="popular-list">
+      <li><a href="#" class="headline">EDITORIAL: Where process meets principle in modern border policy</a></li>
+      <li><a href="#" class="headline">Analysts sound alarm over stalled diplomatic efforts in Nuvania crisis</a></li>
+      <li><a href="#" class="headline">Opinion: Has global faith lost its compass?</a></li>
+      <li><a href="#" class="headline">Command rethink: Are sea-based assets vulnerable in the new arms race?</a></li>
+      <li><a href="#" class="headline">Five takeaways from the Unity Commission’s findings on high-profile security
+          breach</a></li>
+    </ul>
+  </section>
+</aside>
+    <aside id="right-column" class="homecolumns rightcolumn" role="complementary">
+
+  <!-- Social Bar -->
+  <nav class="socialbar" aria-label="Follow us on social media">
+    <span class="title">Follow Us</span>
+    <ul>
+      <li>
+        <a class="socialicon" href="#" aria-label="Facebook">
+          <!-- Custom Icon - by ChatGPT -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-hidden="true">
+            <rect width="512" height="512" rx="18%" fill="#1a70d2" />
+            <rect width="512" height="512" rx="18%" fill="none" stroke="#1359a0" stroke-width="10"/>
+            <path fill="#fff"
+              d="M345 340l12-70h-68v-50c0-22 10-36 38-36h30v-58s-24-6-52-6c-52 0-86 31-86 90v60h-60v70h60v170h75V340h51z" />
+          </svg>
+          
+        </a>
+      </li>
+      <li>
+        <a class="socialicon" href="#" aria-label="Twitter">
+          <!-- Custom Icon - by ChatGPT -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 510" role="img" aria-hidden="true">
+            <rect width="512" height="512" rx="18%" fill="#111" />
+            <rect width="512" height="512" rx="18%" fill="none" stroke="#333" stroke-width="10"/>
+            <path fill="#fff"
+              d="M310 152h38l-70 85 88 118h-70l-54-70-60 70h-38l80-92-84-110h70l48 65 58-65zm-10 183h22L198 172h-21l123 163z" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="socialicon" href="#" aria-label="Instagram">
+          <!-- Custom Icon - by ChatGPT -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-hidden="true">
+            <rect width="512" height="512" rx="18%" fill="url(#custom-hover)" />
+            <rect width="512" height="512" rx="18%" fill="url(#custom-bg)" />
+            <g fill="none" stroke="#fff" stroke-width="26">
+              <rect x="110" y="110" width="292" height="292" rx="76"></rect>
+              <circle cx="256" cy="256" r="66"></circle>
+              <circle cx="340" cy="170" r="8"></circle>
+            </g>
+            <defs>
+              <radialGradient id="custom-hover" cx="0.3" cy="0.9" r="1.2">
+                <stop offset="0%" stop-color="#ffa500" />
+                <stop offset="50%" stop-color="#ff3e8d" />
+                <stop offset="100%" stop-color="#8e2de2" />
+              </radialGradient>
+              <linearGradient id="custom-bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#395ab8" />
+                <stop offset="100%" stop-color="#7928ca" stop-opacity="0.7" />
+              </linearGradient>
+            </defs>
+          </svg>          
+        </a>
+      </li>
+      <li>
+        <a class="socialicon" href="#" aria-label="RSS">
+          <!-- Custom Icon - by ChatGPT -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-hidden="true">
+            <rect width="512" height="512" rx="18%" fill="#ff7043"></rect>
+            <rect width="512" height="512" rx="18%" fill="#ff7043"></rect>
+            <circle cx="160" cy="350" r="30" fill="#fff" />
+            <path fill="none" stroke="#fff" stroke-width="55"
+              d="M120 240c85 0 155 70 155 155m110 0c0-140-115-255-255-255" />
+          </svg>
+          
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Search slot for desktop -->
+  <!-- Injected in the DOM via JS -->
+  <div class="search-desktop">
+      <div id="search-slot-desktop"></div>
+  </div>
+  
+  <!-- Video -->
+  <figure class="video-block">
+    <div class="video-container">
+      <video class="video" muted autoplay playsinline loop controls>
+        <source src="rsc/The-Florence-Times-Video.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.</p>
+      </video>
+    </div>
+    <figcaption class="video-link">
+      <a href="#" target="_blank">See more videos</a>
+    </figcaption>
+  </figure>
+
+  <!-- Our Voices Section -->
+  <section class="block our-voices" aria-labelledby="our-voices-heading">
+    <h2 class="block-title" id="our-voices-heading">Commentary</h2>
+    <ul class="block-content">
+      <li>
+        <article class="story-item sm-thumb is-portrait">
+          <a class="main-photo" href="#">
+            <img src="rsc/placeholder-170-238.webp" alt="Cal Thomas">
+          </a>
+          <div class="story-details">
+            <h3 class="article-headline">
+              <a href="#" aria-label="Read commentary by Cal Thomas">Cal Thomas</a>
+            </h3>
+            <p><a href="#" aria-label="Take out Iran’s nuclear facilities now by Cal Thomas">Take out Iran’s nuclear facilities now</a></p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="story-item sm-thumb is-portrait">
+          <a class="main-photo" href="#">
+            <img src="rsc/placeholder-170-238.webp" alt="Cheryl K. Chumley">
+          </a>
+          <div class="story-details">
+            <h3 class="article-headline">
+              <a href="#" aria-label="Read commentary by Cheryl K. Chumley">Cheryl K. Chumley</a>
+            </h3>
+            <div class="premium-tag">Premium</div>
+            <p><a href="#" aria-label="The stupidity of guessing deaths by Cheryl K. Chumley">The stupidity of guessing deaths</a></p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="story-item sm-thumb is-portrait">
+          <a class="main-photo" href="#">
+            <img src="rsc/placeholder-170-238.webp" alt="Joseph Curl">
+          </a>
+          <div class="story-details">
+            <h3 class="article-headline">
+              <a href="#" aria-label="Read commentary by Joseph Curl">Joseph Curl</a>
+            </h3>
+            <p><a href="#" aria-label="Sanders and AOC’s private jet tour by Joseph Curl">Sanders and AOC’s private jet tour</a></p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="story-item sm-thumb is-portrait">
+          <a class="main-photo" href="#">
+            <img src="rsc/placeholder-170-238.webp" alt="Andrew P. Napolitano">
+          </a>
+          <div class="story-details">
+            <h3 class="article-headline">
+              <a href="#" aria-label="Read commentary by Andrew P. Napolitano">Andrew P. Napolitano</a>
+            </h3>
+            <p><a href="#" aria-label="Pope Francis may have been the worst pope in history by Andrew P. Napolitano">Pope Francis may have been the worst pope in history</a></p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+</aside>
+
+  </div>
+</div>
+<footer id="pre-footer" role="contentinfo">
+  <!-- More News Region -->
+  <div class="pre-footer-block" role="region" aria-labelledby="more-news-title">
+    <h2 id="more-news-title" class="pre-footer-heading">
+      <img src="rsc/The-Florence-Times-Round-Logo.svg" loading="lazy" alt="" aria-hidden="true">
+      More Stories
+    </h2>
+    <div class="grid">
+
+      <section role="region" aria-labelledby="cat-crime">
+        <h3 id="cat-crime">
+          <a href="#">Crime &amp; Justice</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Toronto businessman arrested in international money laundering scheme</a></li>
+          <li><a href="#">Texas police uncover human trafficking ring operating near border</a></li>
+          <li><a href="#">Court dismisses charges against whistleblower after major legal battle</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-relations">
+        <h3 id="cat-relations">
+          <a href="#">International Relations</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">U.K. and EU finalize historic trade agreement post-Brexit</a></li>
+          <li><a href="#">North Korea demands release of citizens detained in Malaysia</a></li>
+          <li><a href="#">Diplomatic crisis erupts as Russia suspends peace talks with NATO</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-local">
+        <h3 id="cat-local">
+          <a href="#">Local News</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Denver experiences record snowfall, causing widespread disruption</a></li>
+          <li><a href="#">Portland city council debates controversial zoning law overhaul</a></li>
+          <li><a href="#">Boston leaders announce $50 million program to combat homelessness</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-global">
+        <h3 id="cat-global">
+          <a href="#">Global Affairs</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">EU announces new sanctions on Belarus following election protests</a></li>
+          <li><a href="#">UN peacekeepers deployed to prevent violence in the Sahel region</a></li>
+          <li><a href="#">Brazilian president calls for tighter border controls amid migrant surge</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-business">
+        <h3 id="cat-business">
+          <a href="#">Business &amp; Innovation</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Tesla to build new electric car manufacturing plant in Germany</a></li>
+          <li><a href="#">Apple unveils revolutionary AR headset at annual tech conference</a></li>
+          <li><a href="#">New tech startup aims to revolutionize online banking experience</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-culture">
+        <h3 id="cat-culture">
+          <a href="#">Culture &amp; Religion</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Vatican announces new initiative to preserve cultural heritage sites</a></li>
+          <li><a href="#">The rise of spirituality in modern pop culture, a growing trend</a></li>
+          <li><a href="#">Greek Orthodox Church celebrates centuries-old tradition in Athens</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-health">
+        <h3 id="cat-health">
+          <a href="#">Health &amp; Wellness</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Breakthrough cancer treatment shows promising results in trials</a></li>
+          <li><a href="#">Mental health apps gain popularity as digital therapy tools rise</a></li>
+          <li><a href="#">Government to implement new regulations on air quality standards</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-entertainment">
+        <h3 id="cat-entertainment">
+          <a href="#">Arts &amp; Entertainment</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">Legendary artist Banksy opens first official gallery exhibition</a></li>
+          <li><a href="#">Hollywood stars gather for exclusive fundraiser for children's hospital</a></li>
+          <li><a href="#">Iconic TV series makes a comeback after 15 years off the air</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-travel">
+        <h3 id="cat-travel">
+          <a href="#">Travel &amp; Adventure</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">The Maldives introduces new eco-friendly tourism policies</a></li>
+          <li><a href="#">Alaskan cruise companies explore new routes to attract tourists</a></li>
+          <li><a href="#">Swiss government launches initiative to protect alpine wildlife</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-tech">
+        <h3 id="cat-tech">
+          <a href="#">Technology &amp; Future</a>
+        </h3>
+        <ul class="story-list">
+          <li class="lead"><a href="#">AI-powered drones set to revolutionize delivery systems</a></li>
+          <li><a href="#">Silicon Valley unveils new advancements in quantum computing</a></li>
+          <li><a href="#">Global leaders meet to discuss ethical implications of AI in warfare</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- Policy Region -->
+  <div class="pre-footer-block" role="region" aria-labelledby="policy-title">
+    <h2 id="policy-title" class="pre-footer-heading">
+      <img src="rsc/The-Florence-Times-Round-Logo.svg" loading="lazy" alt="" aria-hidden="true">
+      Policy &amp; Governance
+    </h2>
+    <div class="grid">
+      <section role="region" aria-labelledby="cat-energy">
+        <h3 id="cat-energy"><a href="#">Energy &amp; Environment</a></h3>
+        <ul class="story-list">
+          <li><a href="#">New green tech policies unveiled at UN climate summit</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-banking">
+        <h3 id="cat-banking"><a href="#">Finance &amp; Economy</a></h3>
+        <ul class="story-list">
+          <li><a href="#">New regulations on cryptocurrency trading spark debate</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-pandemic">
+        <h3 id="cat-pandemic"><a href="#">Pandemic Response</a></h3>
+        <ul class="story-list">
+          <li><a href="#">Government sets new guidelines for reopening post-pandemic</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-gun-control">
+        <h3 id="cat-gun-control"><a href="#">Gun Laws &amp; Rights</a></h3>
+        <ul class="story-list">
+          <li><a href="#">Supreme Court rules on new concealed carry regulations</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-immigration">
+        <h3 id="cat-immigration"><a href="#">Immigration &amp; Reform</a></h3>
+        <ul class="story-list">
+          <li><a href="#">Debate heats up over new border security measures</a></li>
+        </ul>
+      </section>
+
+      <section role="region" aria-labelledby="cat-cybersecurity">
+        <h3 id="cat-cybersecurity"><a href="#">Cybersecurity &amp; Data Protection</a></h3>
+        <ul class="story-list">
+          <li><a href="#">Hackers steal sensitive data from major multinational corporation</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</footer>
+<footer id="site-footer">
+
+    <!-- Connect / Social Region -->
+    <div class="footer-region" role="region" aria-labelledby="connect-title">
+        <h2 id="connect-title" class="visually-hidden">Stay Connected</h2>
+        <div class="footer-groups">
+            <section aria-labelledby="newsletters-title">
+                <h3 id="newsletters-title">Newsletters</h3>
+                <ul>
+                    <li><a href="#">Morning Brew</a></li>
+                    <li><a href="#">Weekend Wrap</a></li>
+                    <li><a href="#">Monthly Insights</a></li>
+                </ul>
+            </section>
+            <section aria-labelledby="facebook-title">
+                <h3 id="facebook-title">Connect on Facebook</h3>
+                <ul>
+                    <li><a href="#">Florence Times Daily</a></li>
+                    <li><a href="#">FT Opinion</a></li>
+                    <li><a href="#">FT Local</a></li>
+                    <li><a href="#">FT Sports</a></li>
+                </ul>
+            </section>
+            <section aria-labelledby="twitter-title">
+                <h3 id="twitter-title">Connect on X</h3>
+                <ul>
+                    <li><a href="#">@FlorenceTimes</a></li>
+                    <li><a href="#">@FT_Opinion</a></li>
+                    <li><a href="#">@FT_Local</a></li>
+                    <li><a href="#">@FT_Sports</a></li>
+                </ul>
+            </section>
+            <section aria-labelledby="youtube-title">
+                <h3 id="youtube-title">Watch on YouTube</h3>
+                <ul>
+                    <li><a href="#">Florence Times Channel</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Main Site Navigation -->
+    <nav class="footer-nav" role="navigation" aria-label="Site Navigation">
+        <h2 class="visually-hidden">Site Navigation</h2>
+        <div class="nav-columns">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Latest News</a></li>
+                <li><a href="#">Local</a></li>
+                <li><a href="#">National</a></li>
+                <li><a href="#">World</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Arts</a></li>
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Editorial</a></li>
+                <li><a href="#">Letters</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Food &amp; Drink</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Home &amp; Garden</a></li>
+                <li><a href="#">Wellness</a></li>
+                <li><a href="#">Fitness</a></li>
+                <li><a href="#">Travel Guides</a></li>
+                <li><a href="#">Automotive</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Photo Essays</a></li>
+                <li><a href="#">Video Stories</a></li>
+                <li><a href="#">Podcasts</a></li>
+                <li><a href="#">Interactive Maps</a></li>
+                <li><a href="#">Archives</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Advertise</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Ad Choices</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Corrections</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Partnerships</a></li>
+                <li><a href="#">Media Kit</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">E‑Paper</a></li>
+                <li><a href="#">RSS Feeds</a></li>
+                <li><a href="#">Newsletter Signup</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">Developer API</a></li>
+                <li><a href="#">Buy Photos</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Footer Utilities -->
+    <nav class="footer-utilities" role="navigation" aria-label="Footer Utilities">
+        <h2 class="visually-hidden">Footer Utilities</h2>
+        <ul>
+            <li><a href="#">Subscribe</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Press Releases</a></li>
+        </ul>
+    </nav>
+
+    <!-- Organization Info / Colophon -->
+    <address class="footer-info" aria-label="Organization Info">
+        <p>
+            All content © <time datetime="2025">2025</time>
+            <span class="org">The Florence Times, Inc.</span>
+            <span class="contact-line">
+                <span class="adr">45 Historic Plaza, Florence, AL 35630</span>
+                <span class="separator">|</span>
+                <a href="tel:+12565551234" class="tel">256‑555‑1234</a>
+            </span>
+        </p>
+    </address>
+
+</footer>
+
+<!-- Secondary navbar, will be injected via JS -->
+<nav class="secondary-navbar">
+  <ul>
+    <li class="has-sub">
+      <a href="#">Top Stories</a>
+      <ul>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Government Affairs</a></li>
+        <li><a href="#">Domestic Focus</a></li>
+        <li><a href="#">Global View</a></li>
+        <li><a href="#">Eastern Conflict Tracker</a></li>
+        <li><a href="#">Security Brief</a></li>
+        <li><a href="#">Crypto Watch</a></li>
+        <li><a href="#">Markets & Trade</a></li>
+        <li><a href="#">Metro Beat</a></li>
+        <li><a href="#">Media Trends</a></li>
+        <li><a href="#">Voices in Focus</a></li>
+        <li><a href="#">Accountability Desk</a></li>
+        <li><a href="#">Defense Digest</a></li>
+        <li><a href="#">Perspectives</a></li>
+        <li><a href="#">Life & Culture</a></li>
+        <li><a href="#">Arts & Screens</a></li>
+        <li><a href="#">Tech Pulse</a></li>
+        <li><a href="#">Tributes</a></li>
+        <li><a href="#">Headlines Only</a></li>
+        <li><a href="#">Visual Reports</a></li>
+        <li><a href="#">In-Depth</a></li>
+        <li><a href="#">40 Years of Insight</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Policies</a>
+      <ul>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Threat Briefs</a></li>
+        <li><a href="#">Energy & Nature</a></li>
+        <li><a href="#">Finance & Markets</a></li>
+        <li><a href="#">Public Health Policy</a></li>
+        <li><a href="#">Civil Rights</a></li>
+        <li><a href="#">Migration Issues</a></li>
+        <li><a href="#">Digital Security</a></li>
+        <li><a href="#">Aero & Tech Defense</a></li>
+        <li><a href="#">Tax & Spending</a></li>
+        <li><a href="#">Justice & Intel</a></li>
+        <li><a href="#">Transport & Urbanism</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Opinions</a>
+      <ul>
+        <li><a href="#">Viewpoint Home</a></li>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Editorial Board</a></li>
+        <li><a href="#">Readers' Letters</a></li>
+        <li><a href="#">Max Cutter</a></li>
+        <li><a href="#">Veronica S. Lane</a></li>
+        <li><a href="#">Tanya Voss</a></li>
+        <li><a href="#">Harlan Reese</a></li>
+        <li><a href="#">Ruth Delmar</a></li>
+        <li><a href="#">Gregory Stone</a></li>
+        <li><a href="#">Camille Novak</a></li>
+        <li><a href="#">Liam B. Trent</a></li>
+        <li><a href="#">Tomas F.</a></li>
+        <li><a href="#">Theo Harper</a></li>
+        <li><a href="#">Dina Hollow</a></li>
+        <li><a href="#">Janet Cruz</a></li>
+        <li><a href="#">Reese Black</a></li>
+        <li><a href="#">Quincy Marks</a></li>
+        <li><a href="#">Aliyah Grant</a></li>
+        <li><a href="#">Martin Oak</a></li>
+        <li><a href="#">Sasha Wills</a></li>
+        <li><a href="#">Clark Mendez</a></li>
+        <li><a href="#">Eli Navarro</a></li>
+        <li><a href="#">Rory Pines</a></li>
+        <li><a href="#">Ava Thomas</a></li>
+        <li><a href="#">Spencer Wade</a></li>
+        <li><a href="#">Luna Y.</a></li>
+        <li><a href="#">Voices of Heritage</a></li>
+        <li><a href="#">Book Shelf</a></li>
+        <li><a href="#">Illustrated Insight</a></li>
+        <li><a href="#">Founding Values</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Sport</a>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">City Grizzlies</a></li>
+        <li><a href="#">Gridiron Weekly</a></li>
+        <li><a href="#">Diamond Report</a></li>
+        <li><a href="#">Court Coverage</a></li>
+        <li><a href="#">College Zone</a></li>
+        <li><a href="#">Jared Stroud</a></li>
+        <li><a href="#">Grand Slam</a></li>
+        <li><a href="#">Greens Report</a></li>
+        <li><a href="#">Ice Coverage</a></li>
+        <li><a href="#">World Football</a></li>
+        <li><a href="#">Equestrian Focus</a></li>
+        <li><a href="#">Motorsport Roundup</a></li>
+        <li><a href="#">Locker Room Podcast</a></li>
+        <li><a href="#">Photo Play</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Sponsored</a>
+      <ul>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Campus Clarity</a></li>
+        <li><a href="#">Capitol Wellness</a></li>
+        <li><a href="#">Invest in Norovia</a></li>
+        <li><a href="#">Medical Outlook 2023</a></li>
+        <li><a href="#">Emerging Africa Report</a></li>
+        <li><a href="#">Migration Focus 2023</a></li>
+        <li><a href="#">Clean Future Series</a></li>
+        <li><a href="#">Invest in Celtovia</a></li>
+        <li><a href="#">Ethical Investing</a></li>
+        <li><a href="#">Pacific Alliance Brief</a></li>
+        <li><a href="#">Valor Tribute</a></li>
+        <li><a href="#">Invest in Marona</a></li>
+        <li><a href="#">Strong Families</a></li>
+        <li><a href="#">Green Energy 2024</a></li>
+        <li><a href="#">Transit Futures 2024</a></li>
+        <li><a href="#">National Energy Month</a></li>
+        <li><a href="#">Invest in Ellas 2025</a></li>
+        <li><a href="#">Freedom Front 2025</a></li>
+        <li><a href="#">Infrastructure Outlook</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Events</a>
+      <ul>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Subscriber Exclusives</a></li>
+        <li><a href="#">TechCon 2025</a></li>
+        <li><a href="#">Post-Global Shift</a></li>
+        <li><a href="#">Harm & Healing</a></li>
+        <li><a href="#">Event Highlights</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Media</a>
+      <ul>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">All Videos</a></li>
+        <li><a href="#">All Podcasts</a></li>
+        <li><a href="#">The Briefing</a></li>
+        <li><a href="#">Threat Briefs</a></li>
+        <li><a href="#">The Unstable Angle</a></li>
+        <li><a href="#">Sharp Talk</a></li>
+        <li><a href="#">Climb Higher</a></li>
+        <li><a href="#">Legal Lens</a></li>
+        <li><a href="#">Winning Ideas</a></li>
+        <li><a href="#">Metro Locker Room</a></li>
+        <li><a href="#">Hillcast</a></li>
+        <li><a href="#">Loose Limits</a></li>
+        <li><a href="#">The Bold Voice</a></li>
+        <li><a href="#">People’s Report</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <a href="#">Puzzles</a>
+      <ul>
+        <li><a href="#">Game Center</a></li>
+        <li><a href="#">Updates & Clarifications</a></li>
+        <li><a href="#">Sudoku Challenge</a></li>
+        <li><a href="#">Crossword Daily</a></li>
+        <li><a href="#">Word Puzzler</a></li>
+        <li><a href="#">Trivia Tests</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<!-- Search bar, will move within the DOM via JS -->
+<form id="site-search" class="search search-form" role="search" action="/search/">
+    <label for="search-input" class="sr-only">Search the site</label>
+    <input type="hidden" name="cx" value="015385541671335030271:nfb7f1nj88q">
+    <input type="hidden" name="cof" value="FORID:11">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input id="search-input" class="search-input" name="q" type="search" placeholder="Search">
+    <button type="submit" class="search-button">
+        <!-- Custom Icon - by ChatGPT -->
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.192 22.183" aria-hidden="true">
+            <path fill="currentColor"
+                d="M20.942 17.332a200.542 200.542 0 01-4.538-4.078 1.317 1.317 0 01-.354-1.825A7.962 7.962 0 008.338.014L8.38 0a7.963 7.963 0 00-.055 15.923l.056.001a7.923 7.923 0 003.58-.828c.029-.017.061-.032.092-.048.16-.073.34-.118.528-.126.02-.002.04-.002.061-.002a1.333 1.333 0 011.087.514 110.679 110.679 0 014.528 4.826c.719.742 1.976.684 2.721-.07.745-.742.734-1.994.015-2.672zm-8.23-5.263a5.88 5.88 0 01-4.234 1.746h-.037c-3.309-.021-5.866-2.628-5.843-5.904.019-3.218 2.67-5.874 5.867-5.874h.037c1.55.01 3.02.629 4.25 1.812s1.756 2.538 1.746 4.246a5.874 5.874 0 01-1.868 4.356z" />
+        </svg>
+        <span class="sr-only">Search</span>
+    </button>
+</form>
+
+  <script src="js/mobile-header.js"></script>
+  <script src="js/secondary-navbar.js"></script>
+  <script src="js/site-search.js"></script>
+</body>
+</html>
